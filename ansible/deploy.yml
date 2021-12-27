@@ -1,0 +1,14 @@
+- name: exam
+  gather_facts: false
+  hosts: [all]
+  become: yes
+
+  tasks:
+
+    - name: Create exam container
+      docker_container:
+        name: nginx
+        state: started
+        image: nginxdemos/hello
+        ports:
+          - "80:80"
