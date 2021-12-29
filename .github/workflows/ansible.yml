@@ -29,7 +29,7 @@ jobs:
           workflow: terraform.yml
           workflow_conclusion: success
           name: terraform
-          repo: bee7ch/infra
+          repo: bee7ch7/infra
 
       - id: host
         env:
