@@ -9,7 +9,9 @@
       docker_container:
         name: php-apache-test
         state: started
+        pull: yes
         recreate: yes
+        ignore_image: no
         restart_policy: always
         image: bee7ch/webapp1:latest
         ports:
