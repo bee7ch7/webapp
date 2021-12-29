@@ -7,7 +7,7 @@
 
     - name: Create exam container
       docker_container:
-        name: nginx
+        name: php-apache-test
         state: started
         image: bee7ch/webapp1:latest
         ports:
