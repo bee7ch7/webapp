@@ -1,4 +1,6 @@
-FROM httpd:2.4
-ARG SITE
-ENV ADMIN_PORT=$SITE
-ENTRYPOINT echo '<iframe src="'$ADMIN_PORT'"></iframe>' > /usr/local/apache2/htdocs/index.html && httpd-foreground
+FROM php:8.0-apache
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+RUN apt-get update && apt-get upgrade -y
+
+COPY index.html /var/www/html
+COPY info.php /var/www/html

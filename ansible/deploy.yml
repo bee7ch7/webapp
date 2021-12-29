@@ -9,6 +9,6 @@
       docker_container:
         name: nginx
         state: started
-        image: nginxdemos/hello
+        image: bee7ch/webapp1:latest
         ports:
           - "80:80"
